@@ -24,7 +24,7 @@
     <br>
     <div class="row">
       <div class="col-sm-12">
-        <table class="table table-dark">
+        <table class="table ">
           <thead>
           <tr>
             <td colspan="12">
@@ -80,8 +80,8 @@
               <td><app-rating [rating]="item.rating" (actionPulse)="receive($event)"></app-rating></td>
               <td>
                 <div class="btn-group" role="group" aria-label="Basic Example">
-                  <button type="button" class="btn btn-info" (click)="editCarSelected($event, item.code)">Edit</button>
-                  <button type="button" class="btn btn-warning" (click)="deleteCarSelected($event, item.code)">Delete</button>
+                  <button type="button" class="btn btn-info" (click)="editCarSelected($event, item.code)">Editar</button>
+                  <button type="button" class="btn btn-warning" (click)="deleteCarSelected($event, item.code)">Eliminar</button>
                 </div>
               </td>
           </tr>
