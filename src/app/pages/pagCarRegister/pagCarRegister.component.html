@@ -1,0 +1,75 @@
+<div class="card">
+  <div class="card-header">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="formCar">
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Codigo:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="code" id="staticCodigo" formControlName="code">
+              <div class="text-danger" *ngIf="formCar.controls['code'].errors?.['required']">Valor Requerido</div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Marca:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="brand" id="staticCodigo" formControlName="brand">
+              <div class="text-danger" *ngIf="formCar.controls['brand'].errors?.['required']">Valor Requerido</div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Modelo:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="model" id="staticCodigo" formControlName="model">
+              <div class="text-danger" *ngIf="formCar.controls['model'].errors?.['required']">Valor Requerido</div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Año:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="year" id="staticCodigo" formControlName="year">
+              <div class="text-danger" *ngIf="formCar.controls['year'].errors?.['required']">Valor Requerido</div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Precio:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="price" id="staticCodigo" formControlName="price">
+              <div class="text-danger" *ngIf="formCar.controls['price'].errors?.['required']">Valor Requerido</div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Kilometros:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="kilometers" id="staticCodigo" formControlName="kilometers">
+              <div class="text-danger" *ngIf="formCar.controls['kilometers'].errors?.['required']">Valor Requerido</div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Calificación:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="rating" id="staticCodigo" formControlName="rating">
+              <div class="text-danger" *ngIf="formCar.controls['rating'].errors?.['required']">Valor Requerido</div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">URL Imagen:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="imgUrl" id="staticCodigo" formControlName="imgUrl">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-info" (click)="saveCar()">GUARDAR</button>
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-outline-secondary"><a [routerLink]="['/cars/']" style="text-decoration: none; color: black"> Regreso </a>
+    </button>
+  </div>
+</div>
